@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Title from '../Title';
+import './blogPage.css';
+import Popular from './Popular';
 
 export default function BlogPage() {
     return (
-        <div>
-            hello from blogpage
-        </div>
+       <React.Fragment>
+         <Popular />
+       </React.Fragment>
     )
 }

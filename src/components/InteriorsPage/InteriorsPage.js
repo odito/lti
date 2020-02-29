@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import BestInteriors from './BestInteriors';
+
+
+
 
 export default function InteriorsPage() {
     return (
-        <div>
-            Hello from interiorspage
-        </div>
+      <React.Fragment>
+         <BestInteriors />
+      </React.Fragment>
     )
 }

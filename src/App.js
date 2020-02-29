@@ -20,7 +20,7 @@ function App() {
     <div className="App">
      
      {/* navbar */}
-   
+      <Navbar />
    
      {/* end of navbar */}
 

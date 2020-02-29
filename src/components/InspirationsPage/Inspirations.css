@@ -1,0 +1,42 @@
+.inspirations{
+    padding:30px 10px;
+    min-height: 80vh;
+}
+
+
+.single-inspiration{
+    
+    /* background: url(/images/decor1.jpg); */
+    min-height:50vh;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-position: center center;
+   
+    margin:30px auto;
+    width: 100%;
+   
+}
+/* responsive */
+
+@media screen and (min-width:664px){
+
+ 
+    .inspirations-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+.single-inspiration{
+   
+    flex:0 0 calc(50% - 0px);
+    min-height:45vh;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-position: center center;
+    border:1px solid white;
+    border-radius: 10px;
+    margin:0px 0;
+ 
+   
+}
+}

@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import AboutContact from './AboutContact';
 
 export default function ContactPage() {
     return (
-        <div>
-           hello from contactpage 
-        </div>
+        <React.Fragment>
+           <AboutContact />
+        </React.Fragment>
     )
 }

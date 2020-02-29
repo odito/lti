@@ -1,5 +1,6 @@
 import React from 'react'
 import './Homepage.css';
+import Header from './Header';
 import Services from './Services';
 import Portfolio from './Portfolio';
 import JustDefault from './JustDefault';
@@ -11,6 +12,7 @@ import ContactForm from './ContactForm';
 export default function HomePage() {
     return (
         <React.Fragment>
+            <Header />
            <Services />
            <Portfolio />
            <JustDefault />

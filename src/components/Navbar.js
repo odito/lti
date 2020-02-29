@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom';
 import {ProductConsumer} from './Context/context';
 
 
+
+
 export default function Navbar() {
     
     
@@ -15,11 +17,10 @@ export default function Navbar() {
            <ProductConsumer>
                 {(value)=>{
                      
-                    const {sidebarOpen, handleSidebar,handleClose,links}=value;
-                  
-                    console.log(sidebarOpen);
+                    const {sidebarOpen, handleSidebar,handleClose,links,scrollEffect,headerShow}=value;
+                     
                   return(
-                    <HeaderWrapper img ={BackImage} show={sidebarOpen}>
+                    <NavWrapper  show={sidebarOpen}  posit={headerShow}>
               
 
                     <div className="header-container">
@@ -27,20 +28,14 @@ export default function Navbar() {
                     <div className="logoBtn">
                         <Link to="/" onClick={handleClose}><img src={logo} alt="logo"/></Link>
                         <div className="btn" onClick={handleSidebar} >
-                           <div className="bar"></div>
+                           <div  className="bar"></div>
                            <div className="bar"></div>
                            <div className="bar"></div>
                         </div>
                     </div>
                   
             <ul className="links " onClick={handleClose} >
-                {/* <li><Link to='/'>Home</Link></li>
-                <li><Link to="/blog">Blog</Link></li>
-                <li><Link to="/biography">Biography</Link></li>
-                <li><Link to ="/interiors">Interiors</Link></li>
-                <li><Link to="/events">Events</Link></li>
-                <li><Link to="contact">Contact</Link></li>
-                <li><Link to="inspirations">Inspirations</Link></li> */}
+                
                 {links.map(links=>{
                     return(
                     <li key={links.id}><Link to={links.path}>{links.link}</Link></li>
@@ -50,14 +45,11 @@ export default function Navbar() {
                   
                   
                 </nav>
+
                 </div>
-           <div className="headerTexts" >
-               <h1>I'm looking for the unexpected</h1>
-               <h1>I' m looking fro things i've never ssen before</h1>
-             
-           </div>
+          
        
-           </HeaderWrapper>
+           </NavWrapper>
                   )
                 }}
             </ProductConsumer>
@@ -69,10 +61,15 @@ export default function Navbar() {
 }
 
 
-const HeaderWrapper = styled.div`
+const NavWrapper = styled.div`
+ 
+position:sticky;
+top:0;
+z-index:6;
 
-    min-height:65vh;
-    background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(${BackImage})  center/cover no-repeat;
+background:${props=>props.posit?'rgba(0,0,0,0.7)':'rgba(0,0,0,0.3)'};
+transition:${props=>props.posit?"all 0.5s ease-in-out":'all 0s ease-in-out'};
+opacity:${props=>props.posit?"1":'0.9'};
 
 
 .logoBtn img{
@@ -83,10 +80,11 @@ const HeaderWrapper = styled.div`
 }
 
 .header-container{
-    background:rgba(0,0,0,0.7);
-    position:fixed;
+   
+   
     width:100%;
     z-index:5;
+  
 }
 
 .bar{
@@ -122,7 +120,7 @@ const HeaderWrapper = styled.div`
     background:rgba(0,0,0,0.9);
     width:400px;
 
-    z-index:5;
+   
     transform:${props=>props.show ?"translate(%)":"translate(-100%)"};
     
     
@@ -156,17 +154,10 @@ const HeaderWrapper = styled.div`
     padding:0 5px;
 }
 
-.headerTexts h1{
-    font-size:20px;
-    text-transform:uppercase;
-    color:#fff;
-    background:rgba(97,104,112,0.8);
-    margin:5px ;
-    padding:5px;
-    font-weight:400; 
-}
 
 /* responsive version */
+
+
 
 @media screen and (min-width:870px){
     .links{
@@ -181,14 +172,14 @@ const HeaderWrapper = styled.div`
 }
 
 @media screen and (min-width:880px){
-    min-height:100vh;
+   
 
  .header-container{
-    background:rgba(0,0,0,0.4);
+  
     margin:0 auto;
-    position:relative;
+    
     width:100%;
-    position:fixed;
+   
     }
 
 .btn{
@@ -240,12 +231,10 @@ const HeaderWrapper = styled.div`
 .logoBtn img{
     display:block;
     padding:0px 0;
-    width:200px;
+   
     
 }
-.headerTexts h1{
-    font-size:25px; 
-}
+
 
 }
 

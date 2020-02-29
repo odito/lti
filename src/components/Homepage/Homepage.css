@@ -51,7 +51,7 @@
 
 @media screen and (min-width:978px){
     .services{
-        padding:30px 0;
+        padding:60px 0;
        
     }
     .services-center{
@@ -145,6 +145,9 @@
 }
 
 @media screen and (min-width:868px){
+    .portfolio{
+        padding:60px 0;
+    }
     .portfolio-center{
         display: flex;
         flex-wrap: wrap;
@@ -187,6 +190,9 @@
 }
 
 @media screen and (min-width:664px){
+  
+   
+
   .just-default-center{
    display: flex;
    flex-wrap: wrap;
@@ -211,6 +217,10 @@
 }
 
 @media screen and (min-width:864px){
+
+ .just-default{
+    padding:60px 0;
+    }
 .just-default-center{
     display: flex;
     flex-wrap: wrap;
@@ -254,6 +264,12 @@
     top:-40px;
     right:0;
     
+}
+
+@media screen and (min-width:868px){
+ .twitter{
+     padding:60px 0;
+ }
 }
 
 /*end of twitter section */
@@ -317,6 +333,12 @@
 }
 
 @media screen and (min-width:864px){
+
+
+    .whoIs{
+        padding:60px 0;
+    }
+
 .whoIs-center{
     display: flex;
     justify-content: space-between;
@@ -359,6 +381,12 @@
     right:0;
     
 }
+
+@media screen and (min-width:868px){
+    .testimonial{
+        padding:60px 0;
+    }
+   }
 
 /* end of testimonial section */
 
@@ -440,6 +468,9 @@ form p {
 }
 
 @media screen and (min-width:868px){
+
+  
+  
  
     .contact-form{
         background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url(/images/backForm.jpg);
@@ -448,7 +479,7 @@ form p {
         background-repeat: no-repeat;
         background-size: 100%;
         background-attachment: fixed;
-        padding:30px 10px;
+        padding:60px 10px;
     } 
   
 }
@@ -495,5 +526,11 @@ footer ul li a{
 }
 
 
+@media screen and (min-width:868px){
 
+    footer{
+        padding:60px 0;
+    } 
+
+}
 /* end of fiiter  */

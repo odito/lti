@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {Links} from './Data';
 import {Services} from '../Context/Data';
 import {Portfolio} from '../Context/Data';
+import {blogItems} from '../Context/Data';
+import {Interiors} from '../Context/Data';
+import {Events} from '../Context/Data';
 
 const ProductContext = React.createContext();
 
@@ -14,7 +17,11 @@ const ProductContext = React.createContext();
        links:Links,
        services:Services,
        portfolio:Portfolio,
-       headerShow:false
+       headerShow:false,
+       blogItems:blogItems,
+       Interiors:Interiors,
+       Events:Events,
+
    }
 
 
@@ -41,21 +48,26 @@ handleClose = ()=>{
 
 componentDidMount(){
     window.addEventListener("scroll",this.scrollEffect);
+  
+
 }
 
 // scroll effect
 scrollEffect = ()=>{
-   if(window.screenY>0){
-     this.setState({
-        headerShow:true
-     })
-   }
 
-   else if(window.screenY<0){
+  if(window.scrollY > 50 ){
     this.setState({
-        headerShow:false
-     })
-   }
+        headerShow:true
+    })
+  }
+
+  else {
+      this.setState({
+          headerShow:false
+      })
+  }
+   
+   
 }
 
 

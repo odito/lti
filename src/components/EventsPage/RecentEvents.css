@@ -1,0 +1,38 @@
+
+.recentEvents{
+padding:30px 10px;
+background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)) ,url(/images/events/event.jpg) center/cover no-repeat;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    margin:40px 0;
+    opacity: 0.6;
+}
+
+.table td, .table th{
+    border:1px solid #ccc;
+    padding:10px;
+    text-transform: capitalize;
+    /* font-weight: bold; */
+}
+
+.table tr:nth-child(even){
+    background: #f2f2f2;
+}
+.table tr:nth-child(odd){
+    background: #fffefe;
+}
+
+.table tr:hover{
+    background: #b6b3b3;
+}
+
+.table th{
+    text-align: left;
+    background: #4caf50;
+    color:#fff;
+    text-transform:uppercase;
+   
+}
