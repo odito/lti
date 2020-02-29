@@ -5,11 +5,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import {ProductProvider} from './components/Context/context';
+import ScrollIntoView from './ScrollToTop';
+
 
 ReactDOM.render(
   <ProductProvider>
-<BrowserRouter>
-  <App />
+<BrowserRouter >
+  <ScrollIntoView>
+     <App />
+  </ScrollIntoView>
+ 
 </BrowserRouter>
 </ProductProvider>
 , document.getElementById('root'));
